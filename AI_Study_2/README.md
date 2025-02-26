@@ -13,11 +13,7 @@ The model combines **Graph Neural Networks (GNNs)** and **Recurrent Neural Netwo
 
 ### 1. **Comorbidity Graph**  
 - **Nodes**: Represent diseases.  
-- **Edges**: Created if two diseases co-occur in ≥1 training patient. Edge weights are computed using the **Jaccard Index** to prioritize frequently co-occurring diseases:  
-  \[
-  P = \frac{N_{i,j}}{N_i + N_j - N_{i,j}}
-  \]  
-  where \(N_i, N_j\) = patient counts for diseases \(i, j\), and \(N_{i,j}\) = patients with both.  
+- **Edges**: Created if two diseases co-occur in ≥1 training patient. Edge weights are computed using the **Jaccard Index** to prioritize frequently co-occurring diseases.
 
 ### 2. **Neural Network Components**  
 - **GATv2Conv Layers**: Update disease embeddings using the comorbidity graph.  
